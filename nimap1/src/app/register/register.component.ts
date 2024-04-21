@@ -63,8 +63,8 @@ this.apicallService.postApiCAll(this.registerFormData.value).subscribe(res=>{
   }
   add(){
     let value1=document.getElementById('inputChip1')
-    let data=this.elementRef.nativeElement.getElementById(inputChip1)
-  console.log(data);
+    // let data=this.elementRef.nativeElement.getElementById(inputChip1)
+  // console.log(data);
   
     
     // this.tags.push(this.addChipName)
