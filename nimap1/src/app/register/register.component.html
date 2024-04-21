@@ -1,0 +1,131 @@
+<br> <br> <br>
+<div class="main">
+  <form [formGroup]="registerFormData" >
+  <h3 class="Register">Register   <span class="exit" (click)="exit()">X</span></h3>
+ 
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="upload-container">
+
+          <img src="../../assets/profile.jpg" *ngIf="!imageUrl"  class="image-preview"  height="310" width="325" >
+          <img *ngIf="imageUrl" [src]="imageUrl"  class="image-preview" height="310" width="325" />
+     
+          
+
+
+<label for="inputField" class="text-primary">Upload Image Here</label>
+<input type="file"  #fileInput formControlName="img"  accept="image/*" (change)="onFileSelected($event)"  id="inputField" style="display:none">
+        </div>
+      </div>
+      <div class="col-md-8 my-4">
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div data-mdb-input-init class="form-outline">
+              <input type="text" id="form3Example1m" class="form-control " formControlName="fName" placeholder="First Name" />
+
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div data-mdb-input-init class="form-outline">
+              <input type="text" id="form3Example1n" class="form-control " formControlName="lName" placeholder="Last Name" />
+            </div>
+          </div>
+        </div>
+
+
+
+        <div data-mdb-input-init class="form-outline mb-4">
+          <input type="text" class="form-control " placeholder="Email" formControlName="email" />
+
+        </div>
+        <div data-mdb-input-init class="form-outline mb-4">
+          <input type="text" class="form-control " placeholder="(541) 754-3010" formControlName="contact" />
+
+        </div>
+      Age: {{age? age :'20'}}
+        <mat-slider min="20" max="60" [(ngModel)]="age"  formControlName="age" step="1" showTickMarks discrete [displayWith]="formatLabel">
+          <input matSliderThumb>
+          
+        </mat-slider>
+   
+
+        <select class="form-select  mb-3" aria-label=".form-select-lg example" formControlName="state">
+          <option selected>State</option>
+          <option value="MH">MH</option>
+          <option value="GOA">GOA</option>
+          <option value="KA">KA</option>
+        </select>
+
+        <select class="form-select  mb-3" aria-label=".form-select-lg example" formControlName="country">
+          <option selected>Country</option>
+          <option value="india">India</option>
+          <option value="USA">USA</option>
+          <option value="spen">Spen</option>
+        </select>
+        <mat-form-field  class="dropdown-List" >
+          <mat-label>Address</mat-label>
+          <mat-select formControlName="address">
+            <mat-option value="home" (click)="address('home')">Home</mat-option>
+            <mat-option value="company" (click)="address('company')">Company</mat-option>
+           
+       
+          </mat-select>
+        </mat-form-field>
+
+        <div class="row" *ngIf="addressData=='home'" >
+          <div class="col-md-6 mb-4">
+            <div data-mdb-input-init class="form-outline">
+              <input type="text" id="form3Example1m" class="form-control " formControlName="address1" placeholder="Address 1" />
+
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div data-mdb-input-init class="form-outline">
+              <input type="text" id="form3Example1n" class="form-control  " placeholder="Address 2"  formControlName="address2" />
+            </div>
+          </div>
+        </div>
+        <div class="row" *ngIf="addressData=='company'" >
+          <div class="col-md-6 mb-4">
+            <div data-mdb-input-init class="form-outline">
+              <input type="text" id="form3Example1m" class="form-control " formControlName="comAdd1" placeholder="Company Address 1" />
+
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div data-mdb-input-init class="form-outline">
+              <input type="text" id="form3Example1n" class="form-control    " formControlName="comAdd2" placeholder=" Company Address 2"  />
+            </div>
+          </div>
+        </div>
+
+
+        <div class="chips-container" id="chipsContainer">
+          <input type="text" id="inputChip1" placeholder="Enter a chip"    />
+          <button (click)="add()" class="add" >add</button>
+          
+      <div *ngFor="let data of tags" class="chip1">{{data}}  <span>X</span></div>
+         
+        </div>
+        
+        
+
+     
+
+        <div class="d-flex justify-content-end pt-3">
+          <button type="button" style="border: 1px solid rgb(82, 79, 79); padding: 10px;" data-mdb-button-init
+            data-mdb-ripple-init class="btn btn-light " (click)="exit()">Cancel</button>
+          <button type="button" data-mdb-button-init data-mdb-ripple-init
+            class="btn btn-primary  ms-2" (click)="submit()">Submit</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+<br><br><br>
+
+
+

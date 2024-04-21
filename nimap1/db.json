@@ -1,0 +1,38 @@
+{
+  "user": [
+    {
+      "img": null,
+      "fName": "dnyaneshwar",
+      "lName": "gavade",
+      "email": "jakasjk",
+      "contact": "22424242",
+      
+      "age": null,
+      "state": "2",
+      "country": "1",
+      "id": 1
+    },
+    {
+      "img": null,
+      "fName": null,
+      "lName": null,
+      "email": null,
+      "contact": null,
+      "age": 32,
+      "state": null,
+      "country": null,
+      "id": 2
+    },
+    {
+      "img": null,
+      "fName": null,
+      "lName": null,
+      "email": null,
+      "contact": null,
+      "age": 21,
+      "state": null,
+      "country": null,
+      "id": 3
+    }
+  ]
+}
