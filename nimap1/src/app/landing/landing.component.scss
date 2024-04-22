@@ -3,13 +3,13 @@
 background-repeat: no-repeat;
 background-size: cover;
 background-position: bottom-center;
-height:100vh;
+height:86vh;
 color:#fff;
 display: flex;
 align-items:center;
 justify-content: center;
 
-margin-bottom: 20px;
+// margin-bottom: 20px;
 z-index: -2;
 }
 
@@ -222,7 +222,14 @@ a.chip.large{
   }
 }
 // 
-
+input[type='search']{
+  width: 60%;
+  padding: 6px;
+  border-radius: 10px;
+}
+button{
+  margin-left: 40%;
+}
 
 
 

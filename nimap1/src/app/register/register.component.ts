@@ -51,7 +51,7 @@ registerFormData!:FormGroup
     console.log(this.singleData.fName);
     
   this.registerFormData=this.fb.group({
-    img:[this.editId?this.singleData[0]?.img:''],
+    img:[this.editId?this.singleData.img:''],
     fName:[this.editId?this.singleData.fName:'',[Validators.required,Validators.pattern(/[A-Za-z]/g),Validators.maxLength(20)]],
     lName:[this.editId?this.singleData.lName:''],
     email:[this.editId?this.singleData.email:''],
