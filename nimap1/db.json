@@ -1,13 +1,13 @@
 {
   "user": [
     {
-      "img": null,
+      "img": "C:\\fakepath\\IMG_0590.JPG",
       "fName": "dnyaneshwar",
       "lName": "gavade",
       "email": "dnyaneshwarg163@gmail.com",
       "contact": "8767683058",
-      "age": 23,
-      "state": "GOA",
+      "age": 30,
+      "state": "MH",
       "country": "india",
       "address": "home",
       "chips": [
@@ -16,122 +16,15 @@
         "chens"
       ],
       "homeAddress": {
-        "address1": "stayfytsa",
-        "address2": "Post Patne"
+        "address1": "katraj",
+        "address2": "pune"
       },
       "companyAddress": {
         "comAdd1": null,
         "comAdd2": null
       },
       "id": 1
-    },
-    {
-      "img": "C:\\fakepath\\IMG_0667.JPG",
-      "fName": "chens",
-      "lName": "sutar",
-      "email": "dsadsa",
-      "contact": "131313",
-      "age": 21,
-      "state": "MH",
-      "country": "spen",
-      "address": "company",
-      "chips": [
-        "22eqe",
-        "22eqe"
-      ],
-      "homeAddress": {
-        "address1": null,
-        "address2": null
-      },
-      "companyAddress": {
-        "comAdd1": "dw",
-        "comAdd2": "company"
-      },
-      "id": 2
-    },
-    {
-      "img": "C:\\fakepath\\IMG_0588.JPG",
-      "fName": null,
-      "lName": null,
-      "email": null,
-      "contact": null,
-      "state": null,
-      "country": null,
-      "address": null,
-      "chips": [],
-      "homeAddress": {
-        "address1": null,
-        "address2": null
-      },
-      "companyAddress": {
-        "comAdd1": null,
-        "comAdd2": null
-      },
-      "id": 3
-    },
-    {
-      "img": null,
-      "fName": "dnyaneshwar",
-      "lName": "gavade",
-      "email": "jhasgh",
-      "contact": "778y7897",
-      "state": "GOA",
-      "country": "india",
-      "address": "home",
-      "chips": [
-        "ram",
-        "sham",
-        "chens"
-      ],
-      "homeAddress": {
-        "address1": "stayfytsa",
-        "address2": "Post Patne"
-      },
-      "companyAddress": {
-        "comAdd1": null,
-        "comAdd2": null
-      },
-      "id": 4
-    },
-    {
-      "img": "",
-      "fName": "",
-      "lName": "",
-      "email": "",
-      "contact": "",
-      "state": "State",
-      "country": "Country",
-      "address": "company",
-      "chips": [],
-      "homeAddress": {
-        "address1": "",
-        "address2": ""
-      },
-      "companyAddress": {
-        "comAdd1": "",
-        "comAdd2": ""
-      },
-      "id": 5
-    },
-    {
-      "img": "",
-      "fName": "",
-      "lName": "",
-      "email": "",
-      "contact": "",
-      "state": "State",
-      "country": "Country",
-      "address": "Address",
-      "chips": [],
-      "homeAddress": {
-        "address1": "",
-        "address2": ""
-      },
-      "companyAddress": {
-        "comAdd1": "",
-        "comAdd2": ""
-      },
-      "id": 6
     }
+    
   ]
 }
