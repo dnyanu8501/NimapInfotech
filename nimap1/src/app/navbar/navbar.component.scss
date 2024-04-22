@@ -1,19 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,400i,600");
 
-body {
-  font-family: Poppins;
-  background-image: url("https://images.unsplash.com/photo-1516124540143-26bf0c56ea23?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg1MzI3Mzd8&ixlib=rb-4.0.3&q=85");
-  background-size: 100vw;
-  background-color: white;
-  margin: 0px;
-  padding: none;
-  color: white;
-}
+// body {
+//   font-family: Poppins;
+//   background-image: url("https://images.unsplash.com/photo-1516124540143-26bf0c56ea23?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg1MzI3Mzd8&ixlib=rb-4.0.3&q=85");
+//   background-size: 100vw;
+//   background-color: white;
+//   margin: 0px;
+//   padding: none;
+//   color: white;
+// }
 
 nav {
   transition: backdrop-filter 0.3s ease;
   display: flex;
-  background-color: rgba(200, 210, 220, 0.2);
+  background-color: rgba(124, 131, 138, 0.607);
   padding: 0px;
   justify-content: center;
   z-index: 1;
@@ -35,7 +35,7 @@ nav:hover {
   backdrop-filter: blur(8px);
 }
 
-nav a {
+nav span {
   z-index: 2;
   transition: border 0.2s ease;
   text-decoration: none;
@@ -48,7 +48,7 @@ nav a {
   border-radius: 999px;
 }
 
-nav a:hover {
+nav span:hover {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 999px;
   backdrop-filter: blur(8px);

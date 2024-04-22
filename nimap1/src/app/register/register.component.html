@@ -23,7 +23,7 @@
           <div class="col-md-6 mb-4">
             <div data-mdb-input-init class="form-outline">
               <input type="text" id="form3Example1m" class="form-control " formControlName="fName" placeholder="First Name" />
-
+               
             </div>
           </div>
           <div class="col-md-6 mb-4">
@@ -31,6 +31,12 @@
               <input type="text" id="form3Example1n" class="form-control " formControlName="lName" placeholder="Last Name" />
             </div>
           </div>
+          <span class="col-md-6  text-danger" style="margin-top: -20px ; float: left;" >
+           <span *ngIf="this.registerFormData.get('fName')?.errors?.['required'] && this.registerFormData.get('fName')?.touched"> Required field</span>
+           <span *ngIf="!this.registerFormData.get('fName')?.errors?.['required'] && this.registerFormData.get('fName')?.errors?.['pattern']">Allow Only Alphabetic Characters</span>
+           <span *ngIf="!this.registerFormData.get('fName')?.errors?.['required'] && !this.registerFormData.get('fName')?.errors?.['pattern'] && this.registerFormData.get('fName')?.errors?.['maxlength']">Maximux 20 Character Allowed</span>
+          </span>
+
         </div>
 
 
@@ -72,7 +78,7 @@
        
           </mat-select>
         </mat-form-field>
-
+       <fieldset formGroupName="homeAddress">
         <div class="row" *ngIf="addressData=='home'" >
           <div class="col-md-6 mb-4">
             <div data-mdb-input-init class="form-outline">
@@ -86,6 +92,9 @@
             </div>
           </div>
         </div>
+      </fieldset>
+
+      <fieldset formGroupName="companyAddress">
         <div class="row" *ngIf="addressData=='company'" >
           <div class="col-md-6 mb-4">
             <div data-mdb-input-init class="form-outline">
@@ -99,13 +108,13 @@
             </div>
           </div>
         </div>
+      </fieldset>
 
-
-        <div class="chips-container" id="chipsContainer">
-          <input type="text" id="inputChip1" placeholder="Enter a chip"    />
-          <button (click)="add()" class="add" >add</button>
+        <div class="chips-container" id="chipsContainer" >
+          <input type="text" id="inputChip1" placeholder="Enter a chip"  formControlName="chips"  />
+          <button (click)="add()" class="add mx-3" >add</button>
           
-      <div *ngFor="let data of tags" class="chip1">{{data}}  <span>X</span></div>
+      <div *ngFor="let data of tags" class="chip1">{{data}}  <span (click)="remove(data)">X</span></div>
          
         </div>
         
@@ -116,8 +125,10 @@
         <div class="d-flex justify-content-end pt-3">
           <button type="button" style="border: 1px solid rgb(82, 79, 79); padding: 10px;" data-mdb-button-init
             data-mdb-ripple-init class="btn btn-light " (click)="exit()">Cancel</button>
-          <button type="button" data-mdb-button-init data-mdb-ripple-init
-            class="btn btn-primary  ms-2" (click)="submit()">Submit</button>
+          <button type="button" *ngIf="!editId" data-mdb-button-init data-mdb-ripple-init
+            class="btn btn-primary  ms-2" (click)="submit()" [disabled]="!this.registerFormData.valid">Submit</button>
+            <button type="button" *ngIf="editId" data-mdb-button-init data-mdb-ripple-init
+            class="btn btn-primary  ms-2 " (click)="edit(editId)">Edit</button>
         </div>
 
       </div>
